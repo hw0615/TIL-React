@@ -1,9 +1,16 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View } from 'react-native'
-import Icon from 'react-native-vector-icons/Ionicons'
-import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom-tabs'
+import { Text, StyleSheet, View, Platform } from 'react-native'
 
-export default class MainScreen extends Component {
+import HomeTab from './AppTapNavigator/HomeTab'
+import SearchTab from './AppTapNavigator/SearchTab'
+import AddMediaTab from './AppTapNavigator/AddMediaTab'
+import LikesTab from './AppTapNavigator/LikesTab'
+import ProfileTab from './AppTapNavigator/ProfileTab'
+
+import Icon from 'react-native-vector-icons/Ionicons'
+import {createMaterialTopTabNavigator} from 'react-navigation'
+
+class MainScreen extends Component {
   
   static navigationOptions = {
     headerLeft: <Icon name="ios-camera-outline" style={{paddingLeft: 10}} />,
@@ -12,9 +19,7 @@ export default class MainScreen extends Component {
   }
   render() {
     return (
-      <View>
-        <Text> MainScreen </Text>
-      </View>
+      <AppTabNavigator />
     )
   }
 }
@@ -34,7 +39,26 @@ const AppTabNavigator =  createMaterialTopTabNavigator({
   },
   ProfileTab: {
     screen: ProfileTab
-  },
+  }
+}, {
+  animationEnable: true,
+  swipeEnabled: true,
+  tabBarPosition: 'bottom',
+  tabBarOptions: {
+    style: {
+      ...Platform.select({
+        android:{
+          backgroundColor: 'white'
+        }
+      })
+    },
+    activeTintColor: '#000',
+    inactiveTintColor: '#d1cece',
+    showLabel: false,
+    showIcon: true
+  }
 })
+
+export default MainScreen
 
 const styles = StyleSheet.create({})
