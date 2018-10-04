@@ -12,6 +12,36 @@ import {createMaterialTopTabNavigator} from 'react-navigation'
 
 import {createDrawerNavigator, DrawerItems} from 'react-navigation'
 
+export default class App extends React.Component {
+  render() {
+    return (
+      <AppStackNavigator />
+    )
+  }
+}
+
+// Create StackNavigation
+const AppStackNavigator = createStackNavigator({
+  Main: {screen: Main,
+    navigationOptions: ({ navigation }) => ({
+      title: 'Main',
+      headerTintColor: 'white',
+      headerStyle: {
+        backgroundColor: 'gray', 
+      }
+    }),
+  },
+  Details: {screen: Details, 
+    navigationOptions: ({ navigation }) => ({
+      title: 'Details',
+      headerTintColor: 'white',
+      headerStyle: {
+        backgroundColor: 'gray', 
+      }
+    }),
+  },
+});
+
 // ============================================================= StackNavigator
 
 // Create Home Screen
