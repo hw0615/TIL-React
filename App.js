@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, SafeAreaView} from 'react-native';
+import {StyleSheet, Text, View, Image, SafeAreaView, ScrollView, Dimensions} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons'
 
 import {createStackNavigator} from 'react-navigation';
@@ -10,7 +10,7 @@ import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom
 
 import {createMaterialTopTabNavigator} from 'react-navigation'
 
-import {createDrawerNavigator} from 'react-navigation'
+import {createDrawerNavigator, DrawerItems} from 'react-navigation'
 
 // ============================================================= StackNavigator
 
@@ -253,6 +253,7 @@ import {createDrawerNavigator} from 'react-navigation'
 
 
 // =============================================================  MaterialTopTabNavigator (bottom)
+
 export default class App extends Component {
   render() {
     return (
@@ -333,8 +334,8 @@ const AppTabNavigator =  createMaterialTopTabNavigator({
       inactiveTintColor: 'grey',
       style: {
         backgroundColor: '#f2f2f2',
-        borderTopWidth: 0.5,
-        borderTopColor: 'grey'
+        // borderTopWidth: 0.5,
+        // borderTopColor: 'grey'
       },
       indicatorStyle: {
         height: 0,
@@ -350,3 +351,44 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   }
 });
+
+// ============================================================= 
+
+
+// =============================================================  Drawer Navigator
+
+// import HomeScreen from './screens/HomeForDraw';
+// import SettingScreen from './screens/SettingForDraw';
+
+// const {width} = Dimensions.get('window')
+// export default class App extends React.Component {
+//   render() {
+//     return (
+//       <AppDrawerNavigation />
+//     )
+//   }
+// }
+
+// const CustomDrawerComponent = (props) => (
+//   <SafeAreaView style={{flex: 1}}>
+//     <View style={{height: 150, backgroundColor: 'white', alignItems: 'center', justifyContent: 'center' }}>
+//       <Image source={require('./assets/3cb84d5de68ece124b637aa22d364736.png')} style={{height: 120, width: 120, borderRadius: 60 }}/>
+//     </View>
+//     <ScrollView>
+//       <DrawerItems {...props} />
+//     </ScrollView>
+//   </SafeAreaView>
+// )
+
+// const AppDrawerNavigation = createDrawerNavigator({
+//   Home: HomeScreen,
+//   Setting: SettingScreen
+// }, {
+//     contentComponent: CustomDrawerComponent,
+//     drawerWidth: width,
+//     contentOptions: {
+//       activeTintColor: 'orange'
+//     }
+// })
+
+// ============================================================= 
