@@ -8,6 +8,7 @@ import LikesTab from './AppTapNavigator/LikesTab'
 import ProfileTab from './AppTapNavigator/ProfileTab'
 
 import Icon from 'react-native-vector-icons/Ionicons'
+// import {Icon} from 'native-base'
 import {createMaterialTopTabNavigator} from 'react-navigation'
 
 class MainScreen extends Component {
@@ -15,7 +16,7 @@ class MainScreen extends Component {
   static navigationOptions = {
     headerLeft: <Icon name="ios-camera-outline" style={{paddingLeft: 10}} />,
     title: 'Instagram',
-    headerLeft: <Icon name="ios-send-outline" style={{paddingLeft: 10}} />
+    headerRight: <Icon name="ios-send-outline" style={{paddingLeft: 10}} />
   }
   render() {
     return (
