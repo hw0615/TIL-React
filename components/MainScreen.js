@@ -7,16 +7,17 @@ import AddMediaTab from './AppTapNavigator/AddMediaTab'
 import LikesTab from './AppTapNavigator/LikesTab'
 import ProfileTab from './AppTapNavigator/ProfileTab'
 
-import Icon from 'react-native-vector-icons/Ionicons'
-// import {Icon} from 'native-base'
+// import Icon from 'react-native-vector-icons/Ionicons'
+import {Icon} from 'native-base'
 import {createMaterialTopTabNavigator} from 'react-navigation'
 
 class MainScreen extends Component {
   
   static navigationOptions = {
-    headerLeft: <Icon name="ios-camera-outline" style={{paddingLeft: 10}} />,
-    title: 'Instagram',
-    headerRight: <Icon name="ios-send-outline" style={{paddingLeft: 10}} />
+    // headerLeft: <Icon name="ios-camera" size={30} style={{paddingLeft: 10}} />,
+    // title: 'Instagram',
+    // headerRight: <Icon name="ios-send" size={30} style={{paddingRight: 10}} />
+    header: null
   }
   render() {
     return (
@@ -47,11 +48,16 @@ const AppTabNavigator =  createMaterialTopTabNavigator({
   tabBarPosition: 'bottom',
   tabBarOptions: {
     style: {
+      height: 65,
+      backgroundColor: '#f2f2f2',
       ...Platform.select({
         android:{
           backgroundColor: 'white'
         }
       })
+    },
+    indicatorStyle: {
+      height: 0,
     },
     activeTintColor: '#000',
     inactiveTintColor: '#d1cece',
