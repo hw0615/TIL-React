@@ -29,7 +29,7 @@ export default class ProfileTab extends Component {
   renderSection = () => {
     if(this.state.activeIndex == 0) {
       return (
-        <View style={{flexDirection: 'row'}}>
+        <View style={{flexDirection: 'row', flexWrap: 'wrap'}}>
           <Text>This is the first section</Text>
         </View>
       )
