@@ -18,7 +18,7 @@ class AddTodo extends Component {
 
   addTodo = (text) => {
     // redux store
-    this.props.dispatch({ type: 'ADD_TODO', text})
+    this.props.dispatch(addTodo(text))
     this.setState({ text: '' })
   }
 
