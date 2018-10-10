@@ -1,38 +1,18 @@
 import React, {Component} from 'react';
 import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
-
-import { createStore } from 'redux'
+import TodoApp from './src/TodoApp'
+import store from './src/store'
 import { Provider } from 'react-redux'
-import CounterApp from './src/CounterApp'
-
-const initialState = {
-  counter: 0
-}
-
-const reducer = (state = initialState, action) => {
-  switch(action.type){
-    case 'INCREASE_COUNTER':
-      return { counter: state.counter + 1 }
-    case 'DECREASE_COUNTER':
-      return { counter: state.counter - 1 }
-  }
-  return state
-}
-
-const store = createStore(reducer)
-
-class App extends Component{
+export default class App extends React.Component{
 
   render() {
     return (
       <Provider store={store}>
-        <CounterApp />
+        <TodoApp />
       </Provider>
     )
   }
 }
-
-export default App;
 
 const styles = StyleSheet.create({
   container: {
