@@ -19,17 +19,17 @@ export const electronics = [
 export const books = [
   {
     id: 4,
-    name: 'Fifa 19',
-    price: 49.99
+    name: 'How to Kill a Mocking Bird',
+    price: 10
   },
   {
     id: 5,
-    name: 'Amazon Echo',
-    price: 199
+    name: 'War of Art',
+    price: 7
   },
   {
     id: 6,
-    name: 'Bose QC 35 Headphones',
-    price: 300
-  },
+    name: 'Relentless',
+    price: 5.99
+  }
 ]

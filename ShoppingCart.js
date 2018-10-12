@@ -4,11 +4,12 @@ import {
   Text,
   StyleSheet
 } from "react-native";
-import {createStackNavigaotr} from 'react-navigation'
+import {createStackNavigator} from 'react-navigation'
 import HomeScreen from './containers/HomeScreen'
 import ElectronicsScreen from './containers/ElectronicsScreen'
 import BooksScreen from './containers/BooksScreen'
-
+import ShoppingCartIcon from './containers/ShoppingCartIcon'
+import CartScreen from './containers/CartScreen'
 class ShoppingCart extends Component {
   render() {
     return (
@@ -18,10 +19,19 @@ class ShoppingCart extends Component {
 }
 export default ShoppingCart;
 
-const AppStackNavigator = createStackNavigaotr({
+const AppStackNavigator = createStackNavigator({
   Home: HomeScreen,
   Electronics: ElectronicsScreen,
-  Books: BooksScreen
+  Books: BooksScreen,
+  Cart: CartScreen
+
+},{
+  navigationOptions: {
+    headerTitle: 'Shopping App',
+    headerRight: (
+      <ShoppingCartIcon />
+    )
+  }
 })
 
 const styles = StyleSheet.create({

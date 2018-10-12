@@ -5,16 +5,31 @@ import {
   StyleSheet
 } from "react-native";
 
+import {books} from '../Data'
+import Products from '../components/Products'
+import {connect} from 'react-redux'
 class BooksScreen extends Component {
+  
+  static navigationOptions = {
+    headerTitle: 'Books'
+  }
+  
   render() {
     return (
       <View style={styles.container}>
-        <Text>BooksScreen</Text>
+        <Products products={books} onPress={this.props.addItemToCart}/>
       </View>
     );
   }
 }
-export default BooksScreen;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addItemToCart: (product) => dispatch({ 
+      type: 'ADD_TO_CART', payload: product 
+    })
+  }
+}
+export default connect(null, mapDispatchToProps)(BooksScreen);
 
 const styles = StyleSheet.create({
   container: {
