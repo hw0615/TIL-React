@@ -5,36 +5,6 @@
 	<key>logFormatVersion</key>
 	<integer>9</integer>
 	<key>logs</key>
-	<dict>
-		<key>09AB5A80-C686-4578-A26D-42FB306A81CF</key>
-		<dict>
-			<key>className</key>
-			<string>IDECommandLineBuildLog</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>09AB5A80-C686-4578-A26D-42FB306A81CF.xcactivitylog</string>
-			<key>highLevelStatus</key>
-			<string>E</string>
-			<key>schemeIdentifier-containerName</key>
-			<string>FirstProject project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>FirstProject</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Building project FirstProject with scheme FirstProject and configuration Debug</string>
-			<key>timeStartedRecording</key>
-			<real>561359213.78211904</real>
-			<key>timeStoppedRecording</key>
-			<real>561359215.42572498</real>
-			<key>title</key>
-			<string>Building project FirstProject with scheme FirstProject and configuration Debug</string>
-			<key>uniqueIdentifier</key>
-			<string>09AB5A80-C686-4578-A26D-42FB306A81CF</string>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>
