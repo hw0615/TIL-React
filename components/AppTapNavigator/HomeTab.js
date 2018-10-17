@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View, ScrollView  } from 'react-native'
+import { Text, StyleSheet, View, ScrollView, Button  } from 'react-native'
 // import Icon from 'react-native-vector-icons/Ionicons'
 import { Container, Content, Icon, Thumbnail, Header, Left, Right, Body } from 'native-base';
 import CardComponent from '../CardComponent'
+import Profile from './ProfileTab'
 
 class HomeTab extends Component {
   
@@ -18,7 +19,11 @@ class HomeTab extends Component {
       <Container style={styles.container}>
 
         <Header>
-          <Left><Icon name="ios-camera" style={{paddingLeft: 10}}></Icon></Left>
+          <Left>
+            <Button title="d" onPress={() => this.props.navigation.navigate('Profile')}>
+              <Icon name="ios-camera" style={{paddingLeft: 10}}></Icon>
+            </Button>
+          </Left>
           <Body><Text>Instagram</Text></Body>
           <Right><Icon name="ios-send" style={{paddingRight: 10}}></Icon></Right>
         </Header>
